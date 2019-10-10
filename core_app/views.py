@@ -8,9 +8,6 @@ def home(request):
 def about(request):
     return render(request,'core_app/about.html')
 
-def services(request):
-    return render(request,'core_app/services.html')
-
 def store(request):
     return render(request,'core_app/store.html')
 
