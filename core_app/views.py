@@ -14,8 +14,5 @@ def store(request):
 def contact(request):
     return render(request,'core_app/contact.html')
 
-def blog(request):
-    return render(request,'core_app/blog.html')
-
 def sample(request):
     return render(request,'core_app/sample.html')
