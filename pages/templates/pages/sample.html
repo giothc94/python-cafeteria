@@ -13,7 +13,7 @@
             <div class="section-content">
                 {{page.content | linebreaks }}
                 {% if user.is_authenticated %}
-                  <p> <a href="#"> Editar </a> </p>
+                  <p> <a href={% url 'admin:pages_page_change' page.id %}> Editar </a> </p>
                 {% endif %}
             </div>
           </div>
