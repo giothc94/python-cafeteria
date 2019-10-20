@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'core_app',
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
-    'ckeditor',
     'social_media.apps.SocialMediaConfig',
     'pages.apps.PagesConfig',
 ]
@@ -125,6 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/home/giothcode/Escritorio/Curso_Python/empresa/webempresa_Backend/root'
+
+# Config for ckeditor
+CKEDITOR_BASEPATH = STATIC_URL + "/ckeditor/ckeditor/"
 
 # media config public
 MEDIA_URL='/media/'
