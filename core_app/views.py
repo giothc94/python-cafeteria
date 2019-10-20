@@ -10,6 +10,3 @@ def about(request):
 
 def store(request):
     return render(request,'core_app/store.html')
-
-def contact(request):
-    return render(request,'core_app/contact.html')
