@@ -14,34 +14,23 @@
             </h2>
 
             <!-- Formulario de contacto -->
-            <form>
-              <div class="form-group">
-                <label>Nombre *</label>
-                <div class="input-group">
-                  <input type="text" class="form-control">
+            {% if 'ok' in request.GET %}
+              <div class="container-fluid text-info m-3">* Su mensaje fue enviado exitosamente, pronto nos pondremos en contacto contigo</div>
+            {% endif %}
+            <form action="" method="POST">
+              {% csrf_token %}
+              {% for field in form_contact %}
+                <div class="form-group">
+                  <label for={{field.name}}>{{field.label}}</label>
+                  <div class="input-group">
+                    {{field}}
+                  </div>
+                  {{field.errors}}
                 </div>
-              </div>
-              <div class="form-group">
-                <label>Email *</label>
-                <div class="input-group">
-                  <input type="text" class="form-control">
-                </div>
-                <ul class="errorlist">
-                  <li>El email no es correcto.</li>
-                </ul>
-              </div>
-              <div class="form-group">
-                <label>Mensaje *</label>
-                <div class="input-group">
-                  <textarea class="form-control"></textarea>
-                </div>
-              </div>
-              <div class="text-center">
-                <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
-              </div>
+              {% endfor %}
+              <input type="submit" value="Enviar" class="btn btn-primary btn-block py-2">
             </form>
             <!-- Fin formulario de contacto -->
-
           </div>
         </div>
       </div>

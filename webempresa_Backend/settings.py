@@ -136,3 +136,10 @@ CKEDITOR_BASEPATH = STATIC_URL + "/ckeditor/ckeditor/"
 MEDIA_URL='/media/'
 
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+# Configuration to send messages in development mode
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '0b5a49e05ad1d3'
+EMAIL_HOST_PASSWORD = '5786ed91974c2c'
+EMAIL_PORT = '2525'
